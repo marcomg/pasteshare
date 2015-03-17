@@ -11,7 +11,7 @@ if (empty ( $result )) {
     $text = $result ['text'];
 }
 
-$url = $url_root . '/edit/cookie/?cookie=' . $cid;
+$url = $url_root . '/edit/cookie/' . $cid;
 
 include (ROOT . '/includes/phpqrcode.php');
 

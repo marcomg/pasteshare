@@ -22,11 +22,17 @@ switch ($q [1]) {
         break;
     
     case 'cookie' :
-        if (! empty ( $_GET ['cookie'] )) {
-            setcookie ( "cid", $_GET ['cookie'], time () + 3600, '/' );
+        if (! empty ( $q[2] )) {
+            setcookie ( "cid", $q[2], time () + 3600, '/' );
         }
         header ( "Location: $url_root" );
         break;
+    
+    case 'delete' :
+        if ($ok) {
+            $db->query ( "DELETE FROM `$config_table` WHERE `cid` = '$cid'" );
+            header ( "Location: $url_root" );
+        }
     
     default :
         header ( "Location: $url_root" );
