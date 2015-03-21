@@ -22,9 +22,14 @@ switch ($q [1]) {
         break;
     
     case 'cookie' :
-        if (! empty ( $q[2] )) {
-            setcookie ( "cid", $q[2], time () + 3600, '/' );
+        if (! empty ( $q [2] )) {
+            setcookie ( "cid", $q [2], time () + 3600, '/' );
         }
+        header ( "Location: $url_root" );
+        break;
+    
+    case 'cookiedelete' :
+        setcookie ( "cid", "$cid", 15, '/' );
         header ( "Location: $url_root" );
         break;
     
