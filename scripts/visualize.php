@@ -15,13 +15,13 @@ if (empty ( $_COOKIE ['cid'] )) {
     
     $time = time ();
     $db->query ( "INSERT INTO `$config_table` (`cid`, `timestamp`, `text`) VALUES ('$cid', '$time', '');" );
-    setcookie ( "cid", "$cid", time () + 3600, '/' );
+    setcookie ( "cid", "$cid", time () + 31536000, '/' );
     header ( "Location: $url_root" );
 } else {
     $query = $db->query ( "SELECT * FROM `$config_table` WHERE `cid` = '" . $db->escape_string ( $_COOKIE ['cid'] ) . "'" );
     $result = $db->fetch_array ( $query );
     if (empty ( $result )) {
-        setcookie ( "cid", "$cid", 15, '/' );
+        setcookie ( "cid", "$cid", 0, '/' );
         header ( "Location: $url_root" );
     } else {
         $cid = $result ['cid'];

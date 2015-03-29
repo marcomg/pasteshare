@@ -4,7 +4,7 @@ $db = new MYSQL ();
 $query = $db->query ( "SELECT * FROM `$config_table` WHERE `cid` = '" . $db->escape_string ( $_COOKIE ['cid'] ) . "'" );
 $result = $db->fetch_array ( $query );
 if (empty ( $result )) {
-    setcookie ( "cid", "$cid", 15, '/' );
+    setcookie ( "cid", "$cid", 0, '/' );
     $ok = false;
 } else {
     $cid = $result ['cid'];
@@ -23,13 +23,13 @@ switch ($q [1]) {
     
     case 'cookie' :
         if (! empty ( $q [2] )) {
-            setcookie ( "cid", $q [2], time () + 3600, '/' );
+            setcookie ( "cid", $q [2], time () + 31536000, '/' );
         }
         header ( "Location: $url_root" );
         break;
     
     case 'cookiedelete' :
-        setcookie ( "cid", "$cid", 15, '/' );
+        setcookie ( "cid", "$cid", 0, '/' );
         header ( "Location: $url_root" );
         break;
     
