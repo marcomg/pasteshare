@@ -11,6 +11,16 @@ require (ROOT . '/includes/functions.php');
 require (ROOT . '/includes/mysql.class.php');
 
 /*
+ * Instantiate needed classes
+ */
+$db = new MYSQL ();
+
+/*
+ * Load scripts
+ */
+require (ROOT . '/includes/cron.php');
+
+/*
  * Load needed script (if don't exist load error script)
  */
 if (! isset ( $_GET ['q'] ) or empty ( $_GET ['q'] ))

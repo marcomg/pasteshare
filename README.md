@@ -19,3 +19,4 @@ To install pasteshare please read INSTALL.txt
 * removed major bug caused by a MAGIC NUMBER;
 * updated README.md file;
 * edited the database to improve performances;
+* added a cron system to clean the database (changed config file);

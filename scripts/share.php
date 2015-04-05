@@ -1,6 +1,4 @@
 <?php
-$db = new MYSQL ();
-
 $query = $db->query ( "SELECT * FROM `$config_table` WHERE `cid` = '" . $db->escape_string ( $_COOKIE ['cid'] ) . "'" );
 $result = $db->fetch_array ( $query );
 if (empty ( $result )) {

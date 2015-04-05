@@ -6,3 +6,7 @@ Procedure:
 * Create a table for pasteshare in includes/database.sql;
 * edit the config.php as inticated in the comments, it's really simple;
 * enjoy it.
+
+Permissions:
+* Every file must be readable;
+* includes/cron_db.txt must be readeble and writeable;

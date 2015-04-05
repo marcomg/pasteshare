@@ -18,3 +18,6 @@ $config_table = 'pasteshare_table';
 
 // Url root (slash excluded)
 $url_root = 'http://localhost/pasteshare';
+
+// Enable automatic database cleaning
+$enable_cron = 0;

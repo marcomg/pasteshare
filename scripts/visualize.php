@@ -1,11 +1,9 @@
 <?php
-$db = new MYSQL ();
-
 if (empty ( $_COOKIE ['cid'] )) {
     // Get free cid
     $while = true;
     while ( $while ) {
-        $cid = string_gen ( 64 );
+        $cid = string_gen ( 64 ); // if you edit this you have to edit the cid row in the database
         $result = $db->query ( "SELECT * FROM `$config_table` WHERE `cid` = '$cid'" );
         $result = $db->fetch_array ( $result );
         if (empty ( $result ['cid'] )) {
