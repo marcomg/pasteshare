@@ -16,4 +16,5 @@ Pasteshare is an opensource software that allow you to share a text between ever
 * added the possibility to delete from every device the paste;
 * added the possibility to disconnect only one device;
 * removed major bug caused by a MAGIC NUMBER;
-* updated README.md file.
+* updated README.md file;
+* edited the database to improve performances;
