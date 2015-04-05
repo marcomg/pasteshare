@@ -2,7 +2,7 @@
 $query = $db->query ( "SELECT * FROM `$config_table` WHERE `cid` = '" . $db->escape_string ( $_COOKIE ['cid'] ) . "'" );
 $result = $db->fetch_array ( $query );
 if (empty ( $result )) {
-    setcookie ( "cid", "$cid", 0, '/' );
+    setcookie ( "cid", "", 0, '/' );
     $ok = false;
 } else {
     $cid = $result ['cid'];
@@ -29,14 +29,14 @@ switch ($q [1]) {
         break;
     
     case 'cookiedelete' :
-        setcookie ( "cid", "$cid", 0, '/' );
+        setcookie ( "cid", "", 0, '/' );
         header ( "Location: $url_root" );
         break;
     
     case 'delete' :
         if ($ok) {
             $db->query ( "DELETE FROM `$config_table` WHERE `cid` = '$cid'" );
-            setcookie ( "cid", "$cid", 0, '/' );
+            setcookie ( "cid", "", 0, '/' );
             header ( "Location: $url_root" );
         }
     
