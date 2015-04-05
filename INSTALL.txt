@@ -1,0 +1,8 @@
+Requiments:
+* PHP 5.6.x;
+* MySQL 5.6.X;
+
+Procedure:
+* Create a table for pasteshare in includes/database.sql;
+* edit the config.php as inticated in the comments, it's really simple;
+* enjoy it.
