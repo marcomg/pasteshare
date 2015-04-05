@@ -14,6 +14,13 @@ class MYSQL {
     }
     
     /**
+     * Close the connection
+     */
+    function __destruct() {
+        mysql_close ();
+    }
+    
+    /**
      * Send a query to the database
      *
      * @param string $query            
@@ -76,12 +83,5 @@ class MYSQL {
     function num_fields($result) {
         $extract = mysql_num_fields ( $result );
         return $result;
-    }
-    
-    /**
-     * Close the connection
-     */
-    function close() {
-        mysql_close ();
     }
 }
