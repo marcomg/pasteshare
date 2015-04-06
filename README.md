@@ -5,7 +5,6 @@ To install pasteshare please read INSTALL.txt
 
 ## To do
 * Add a FAQ;
-* improve the random string algoritm (recycled from an old script).
 
 ## Changelog
 * First commit done;
@@ -20,3 +19,4 @@ To install pasteshare please read INSTALL.txt
 * updated README.md file;
 * edited the database to improve performances;
 * added a cron system to clean the database (changed config file);
+* improved random string algorithm;

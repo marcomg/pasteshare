@@ -5,6 +5,6 @@
  * All pasteshare code is released under the GNU General Public License.
  * See LICENSE.
  */
-error_reporting(E_ALL);
-define('ROOT', getcwd());
-require(ROOT.'/includes/bootstrap.php');
+error_reporting ( E_ALL );
+define ( 'ROOT', getcwd () );
+require (ROOT . '/includes/bootstrap.php');

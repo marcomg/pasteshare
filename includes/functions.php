@@ -1,12 +1,9 @@
 <?php
-function string_gen($long_string_gen) {
-    $string_gen = NULL;
-    for($i = 1; $i <= $long_string_gen; $i ++) {
-        if ($i % 2) {
-            $string_gen = $string_gen . chr ( rand ( 97, 122 ) );
-        } else {
-            $string_gen = $string_gen . rand ( 0, 9 );
-        }
+function string_gen($len, $charset = 'abcdefghijklmopqrstuvwxjzABCDEFGHIJKLMOPQRSTUVWXYZ0123456789') {
+    $result = NULL;
+    $last = strlen ( $charset ) - 1;
+    for($i = 1; $i <= $len; $i ++) {
+        $result .= $charset [rand ( 0, $last )];
     }
-    return $string_gen;
+    return $result;
 }
