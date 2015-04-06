@@ -1,4 +1,4 @@
-#ErrorDocument 403 /?q=errors/403
+ErrorDocument 403 /?q=errors/404
 ErrorDocument 404 /?q=errors/404
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
