@@ -39,6 +39,7 @@ switch ($q [1]) {
             setcookie ( "cid", "", 0, '/' );
             header ( "Location: $url_root" );
         }
+        break;
     
     default :
         header ( "Location: $url_root" );
