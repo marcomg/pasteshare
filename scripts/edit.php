@@ -29,7 +29,9 @@ switch ($q [1]) {
         break;
     
     case 'cookiedelete' :
-        setcookie ( "cid", "", 0, '/' );
+        if ($q [2] == $_COOKIE ['cid']) {
+            setcookie ( "cid", "", 0, '/' );
+        }
         header ( "Location: $url_root" );
         break;
     
